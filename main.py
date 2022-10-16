@@ -1,5 +1,4 @@
-# Take a look at the README.md for some general info about the terminal!
-
+# GitHub page: https://github.com/SCP-049-replit/PyLine-Terminal
 
 def start():
     import os

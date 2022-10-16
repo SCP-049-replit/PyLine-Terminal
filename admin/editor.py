@@ -2,7 +2,7 @@ fileName = input("\033[0;34mEnter file name: \033[0;0m")
 
 # Lotta imports
 from tkinter import *
-import terminal
+from admin import root
 import idlelib.colorizer as ic
 import idlelib.percolator as ip
 import re
@@ -14,13 +14,13 @@ def done():
     global window
     while True:
       print("")
-      terminal.run()
+      root.run()
 
 # Saves edits then closes the window
 def save():
     global fileName, command, done
-    with open("./userfiles/" + fileName, "w") as file:
-        global editor, terminal
+    with open(fileName, "w") as file:
+        global editor, root
         code = editor.get("1.0", "end")
         file.write(code)
         file.close()
@@ -60,7 +60,7 @@ editor.pack()
 
 # Asks for the file, then opens it
 try:
-    with open("./userfiles/" + fileName, "r") as file:
+    with open(fileName, "r") as file:
         code = file.read()
         editor.delete("1.0", "end")
         editor.insert("1.0", code)

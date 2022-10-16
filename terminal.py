@@ -21,8 +21,8 @@ def run():
         pyline.name()
     elif userInput == "terminal.refresh":
         pyline.refresh()
-    elif userInput == "terminal.admin":
-        pyline.admin()
+    elif userInput == "terminal.root":
+        pyline.root()
     elif userInput == "terminal.quit":
         pyline.quit()
       
@@ -55,3 +55,4 @@ def run():
         pyline.runsh()
     else:
         print('\033[1;31m\nUnknown command:', userInput), print("\033[0;0m")
+
